@@ -18,12 +18,10 @@ class App extends Component {
     }));
   };
 
-  countTotalFeedback = () => {
-    // console.log(5);
-    this.setState(prevState => ({
-      value: prevState.value + 1,
-    }));
-  };
+  countTotalFeedback() {
+    console.log(5);
+    return 5;
+  }
 
   countPositiveFeedbackPercentage() {
     //
@@ -47,7 +45,7 @@ class App extends Component {
             good={good}
             neutral={neutral}
             bad={bad}
-            total={this.countTotalFeedback}
+            total={() => this.countTotalFeedback()}
           ></Statistics>
           {/* <Statistics good={} neutral={} bad={} total={} positivePercentage={}></Statistics> */}
         </Section>
